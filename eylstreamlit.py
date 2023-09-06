@@ -380,36 +380,7 @@ if selected2 == "Prediction":
     st.markdown(f'<div style="font-size: 40px; font-weight: bold;">Prediction: ${int(prediction):,}</div>',
                 unsafe_allow_html=True)
 
-    # Merkez Bankası XML dosyasının URL'si
-    url = "https://www.tcmb.gov.tr/kurlar/today.xml"
-
-    # XML dosyasını alın
-    #response = requests.get(url)
-    response = requests.get(url, verify=False)
-
-    root = ET.fromstring(response.content)
-
-    # dolar kurunu bulma
-    dolar_kuru = ""
-    for child in root:
-        if child.tag == "Currency":
-            if child.attrib['Kod'] == "USD":
-                dolar_kuru = child.find('ForexBuying').text
-
-    # dolar kuru ile prediction değerini çarpma
-    tl_degeri = float(dolar_kuru) * prediction
-
-    int_degeri = int(tl_degeri[0])
-
-
-    st.subheader("Türkiye'deki Dolar Kuru 💲: " + dolar_kuru )
-    st.subheader("🇹🇷 Cinsinden Maaş 👉" + str(float(int_degeri)))
-
-
-
-
-
-
+   
 
 elif selected2 == "EDA & Visualizations":
     st.title("EDA & Visualizations")
