@@ -70,7 +70,7 @@ if selected2 == "Prediction":
 
     # Modeli yükleyin
     # Modelin tam yolunu kullanarak modeli yükleyin
-    model_path = r'C:\Users\furka\Desktop\hit_stream\linear_regression_hitters.joblib'
+    model_path = 'linear_regression_hitters.joblib'
     model = load(model_path)
 
     # Kullanıcıdan girdi alın
