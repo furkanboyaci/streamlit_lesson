@@ -70,7 +70,7 @@ if selected2 == "Prediction":
 
     # Modeli yükleyin
     # Modelin tam yolunu kullanarak modeli yükleyin
-    model_path = r'C:\Users\furka\Desktop\hit_stream\724linear_regression_hitters.joblib'
+    model_path = 'linear_regression_hitters.joblib'
     model = load(model_path)
 
     # Kullanıcıdan girdi alın
@@ -505,7 +505,7 @@ else:
         st.title("Linkedin")
         st.write("[Linkedin](https://www.linkedin.com/in/furkanbyc/)", unsafe_allow_html=True)
 
-    #video_path = r"C:\Users\furka\Desktop\vaders_video.mp4"
+    #video_path = "vaders_video.mp" githubtaki ismi ile 
 
     #video_file = open(video_path,'rb')
     #video_bytes = video_file.read()
